@@ -1,48 +1,43 @@
-# Airlines Flights Data Analysis (Project - 1)
+# ✈️ Airlines Flight Price Analysis
 
-Bu layihə aviaşirkətlərin uçuş məlumatlarını analiz etmək, datanı vizuallaşdırmaq və qiymətlərə təsir edən faktorları araşdırmaq üçün hazırlanmış bir Data Analitika layihəsidir.
+## 📌 Project Overview
+This project performs an end-to-end data analysis on airline flight data to uncover price dynamics, purchasing behavior, and travel trends. By cleaning, visualizing, and analyzing a dataset of 39,000+ records, this project provides actionable insights into how factors like travel class, booking time, and flight duration impact ticket pricing.
 
-## 📌 Layihə Haqqında
-Məlumat bazası (dataset) aviaşirkətlərin uçuşları, bilet qiymətləri, uçuş müddətləri, biletin neçə gün əvvəl alınması və digər mühüm faktorları əhatə edir. Layihə çərçivəsində datanın təmizlənməsi (Data Cleaning), kəşfiyyat xarakterli analizi (EDA) və vizuallaşdırılması həyata keçirilmişdir.
+## 🛠️ Tech Stack
+* **Language:** Python
+* **Environment:** Google Colab / Jupyter Notebook
+* **Key Libraries:** Pandas (Data manipulation), NumPy (Numerical computing), Matplotlib & Seaborn (Statistical visualization)
 
-## 📊 Dataset Strukturu
-`df.info()` nəticəsinə əsasən, datada **39,048 sətir** və **14 sütun** mövcuddur:
-- `index`: Unikal sətir nömrəsi
-- `airline`: Aviaşirkətin adı
-- `flight`: Uçuş nömrəsi
-- `source_city`: Uçuşun başladığı şəhər
-- `departure_time`: Uçuş vaxtı (səhər, günorta, axşam və s.)
-- `stops`: Dayanacaqların (köçürmələrin) sayı
-- `arrival_time`: Çatma vaxtı
-- `destination_city`: Təyinat şəhəri
-- `class`: Səyahət klassı (Economy / Business)
-- `duration`: Uçuş müddəti (saatla)
-- `days_left`: Uçuşa qalan günlərin sayı
-- `price`: Biletin qiyməti
-- `buying_time`: Biletin alındığı vaxt periodu
-- `days_left_group`: Qalan günlərin qruplaşdırılmış forması (Kateqoriya)
+## 📂 Dataset
+The original dataset used in this project is hosted externally due to file size constraints. You can access the data files here:
 
-## 🛠️ Data Təmizlənməsi Mərhələsi (Data Cleaning)
-Layihədə yerinə yetirilən əsas təmizləmə addımları:
-1. **Dublikatların Yoxlanması:** `df.duplicated().sum()` vasitəsilə tam təkrar sətirlər yoxlanılmışdır. Mövcud `index` sütununa görə sətirlər unikal göründüyü üçün, əsas biznes sütunları üzrə əlavə yoxlanışlar edilmişdir.
-2. **Boş (Missing) Dəyərlərin Tapılması:** Sütunlardakı əksik dəyərlər (NaN) müəyyən edilərək təmizlənmiş və ya doldurulmuşdur.
-3. **Data Tiplərinin Strukturlaşdırılması:** Sütunlar analizə uyğun olaraq `category`, `float64` və `object` tiplərinə gətirilmişdir.
+[Download Movie Analysis Dataset from Google Drive](https://drive.google.com/drive/folders/1_-Ofn4r52qiNLO7jvoKc_0MdGe4t4uhX?usp=sharing)
 
-## 🚀 İstifadə Olunan Kitabxanalar
-Layihə Python proqramlaşdırma dilində və Google Colab mühitində yazılmışdır:
-- `pandas` - Data manipulyasiyası və analizi
-- `numpy` - Riyazi və massiv əməliyyatları
-- `matplotlib` - Qrafiklərin qurulması
-- `seaborn` - İnkişaf etmiş statistik vizuallaşdırma
+## 📊 Dataset Insights
+The dataset contains **39,048 records** and **14 features**, including:
+* **Flight Details:** Airline, flight number, source/destination cities, and stops.
+* **Pricing Factors:** Travel class (Economy/Business), booking lead time (`days_left`), and duration.
+* **Time Metrics:** Departure and arrival time windows.
 
-## 📈 Əsas Analiz Sualları (EDA)
-- Hansı aviaşirkətin biletləri daha bahadır?
-- Uçuşa qalan günlərin sayı qiymətə necə təsir edir?
-- Business və Economy klasslar arasında qiymət fərqi nə qədərdir?
-- Dayanacaq sayı (stops) uçuş müddətinə və qiymətə necə təsir göstərir?
+## 🔍 Key EDA Findings
+* **Price Drivers:** Analysis of how flight duration and booking lead time correlate with ticket prices.
+* **Segment Comparisons:** Statistical comparison between Economy and Business class pricing.
+* **Operational Trends:** Impact of the number of stops on total flight duration and consumer cost.
 
-## 💻 Layihəni Lokal Kompüterdə İşə Salmaq
+## 🧹 Methodology
+1. **Data Cleaning:** Handling duplicates and managing missing values (NaN) to ensure high data integrity.
+2. **Feature Engineering:** Creating `days_left_group` categories to better analyze user booking behavior.
+3. **Data Preprocessing:** Optimizing data types (`category`, `float64`) for memory efficiency and faster computation.
 
-1. Repozitoriyanı klonlayın:
-   ```bash
-   git clone [https://github.com/turxannbiyev13/airlines-data-analysis.git](https://github.com/turxannbiyev13/airlines-data-analysis.git)
+## 🚀 How to Run
+1. Clone this repository: 
+   `git clone https://github.com/turxannbiyev13/airlines-data-analysis.git`
+2. Open the `.ipynb` file in Google Colab or Jupyter.
+3. Ensure the required libraries are installed: `pip install pandas numpy matplotlib seaborn`
+
+## 📂 Dataset
+Due to file size constraints, the original dataset is hosted externally. You can access it here:
+[Download Airlines Dataset from Google Drive](PASTE_YOUR_GOOGLE_DRIVE_LINK_HERE)
+
+---
+*Created by Turkhan Nabiyev*
